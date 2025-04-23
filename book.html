@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Book Ticket for {{ movie.title }}</h2>
+<form method="POST">
+    <label>Select Time Slot:</label>
+    <select name="slot">
+        {% for slot in movie.slots %}
+            <option value="{{ slot }}">{{ slot }}</option>
+        {% endfor %}
+    </select><br>
+    <input type="submit" value="Book Now">
+</form>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<center><h1>🎬 Upcoming Movies</h1>
+<div class="movie-container">
+    {% for movie in movies %}
+        <div class="movie-card">
+            <img src="{{ movie['image_url'] }}" alt="{{ movie['title'] }} poster">
+            <h2>{{ movie.title }}</h2>
+            <p>{{ movie.desc }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

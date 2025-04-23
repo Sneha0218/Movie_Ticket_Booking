@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    padding: 0;
+    background:  #871aa2 no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0; /* optional: if the background is dark */
+}
+nav {
+    background: #2c1330;
+    color: rgb(4, 4, 4);
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a {
+    color: rgb(255, 255, 255);
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+}
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+}
+.movie-card {
+    background:#421c4a ;
+    color: #fdfafa;
+    width: 250px;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(168, 169, 173, 0.2);
+    transition: transform 0.3s ease;
+}
+.movie-card:hover {
+    transform: scale(1.05);
+}
+.movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+}
+form input, form select, form textarea {
+    padding: 0.8em;
+    margin: 0.5em;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+form input[type="submit"] {
+    background-color: #872ead;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+form input[type="submit"]:hover {
+    background-color: #01b4e4;
+}
+.flashes {
+    list-style: none;
+    padding: 1em;
+}
+.flashes li {
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+.flashes .success { background: #d4edda; color: #155724; }
+.flashes .error { background: #f8d7da; color: #721c24; }
+.flashes .info { background: #d1ecf1; color: #0c5460; }
+footer {
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 2em 1em 1em;
+    margin-top: 4em;
+    font-size: 0.9em;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2em;
+}
+.footer-section {
+    max-width: 250px;
+}
+.footer-section h4 {
+    margin-bottom: 0.5em;
+    color: #ffcc00;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li a {
+    color: #eee;
+    text-decoration: none;
+    display: block;
+    margin: 0.3em 0;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+    color: #01b4e4;
+}
+.social-icons {
+    display: flex;
+    gap: 0.5em;
+    margin-top: 0.5em;
+}
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(0) saturate(100%) invert(57%) sepia(90%) saturate(1100%) hue-rotate(180deg);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2em;
+    border-top: 1px solid #444;
+    padding-top: 1em;
+    font-size: 0.8em;
+}
+
+.seating-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.seat-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.row-label {
+    width: 20px;
+    font-weight: bold;
+}
+
+.seat {
+    position: relative;
+}
+
+.seat input[type="checkbox"] {
+    display: none;
+}
+
+.seat span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    background: #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.seat input:checked + span {
+    background-color: #01b4e4;
+    color: white;
+    font-weight: bold;
+}
+.hero-section::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+}
+.book-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff2058;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.book-btn:hover {
+    background-color: #e60042;
+}
